@@ -18,7 +18,13 @@ function guess {
 			echo "The number of files is $numfil"
 			answer="1"
 		else
-			echo "Try again!"
+			if [ $userguess -lt $numfil ]
+			then
+
+				echo "Too low! Try again!"
+			else
+				echo "Too high! Try again!"
+			fi
 		fi
 	done
 		
